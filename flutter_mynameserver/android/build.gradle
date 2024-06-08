@@ -1,0 +1,60 @@
+group = "com.mywidgets.flutter_mynameserver"
+version = "1.0-SNAPSHOT"
+
+buildscript {
+//    ext.kotlin_version = "1.7.10"
+    // ext.kotlin_version = "1.8.20"
+    // ext.kotlin_version = "1.9.0"
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath("com.android.tools.build:gradle:7.3.0")
+        // classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version")
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+apply plugin: "com.android.library"
+apply plugin: "kotlin-android"
+
+android {
+    if (project.android.hasProperty("namespace")) {
+        namespace = "com.mywidgets.flutter_mynameserver"
+    }
+
+    compileSdk = 34
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    sourceSets {
+        main.java.srcDirs += "src/main/kotlin"
+    }
+
+    defaultConfig {
+        minSdk = 21
+    }
+
+    dependencies {
+         implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+         implementation "com.google.android.gms:play-services-location:21.3.0"
+         implementation "androidx.activity:activity-ktx:1.9.0"
+         implementation "androidx.fragment:fragment-ktx:1.7.1"
+    }
+}

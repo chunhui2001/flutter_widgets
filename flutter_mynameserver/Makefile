@@ -32,7 +32,8 @@ build1:
 	cd $(ROOT_DIR)/example/android && flutter build apk --config-only && cd $(ROOT_DIR)
 
 build2:
-	cd $(ROOT_DIR)/example/android && ./gradlew build -x test && cd $(ROOT_DIR)
+	@#cd $(ROOT_DIR)/example/android && ./gradlew build -x test && cd $(ROOT_DIR)
+	cd $(ROOT_DIR)/example/android && ./gradlew clean build && cd $(ROOT_DIR)
 
 # 使用 pana 工具，计算分数
 pana:
