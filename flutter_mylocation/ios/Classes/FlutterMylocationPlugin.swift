@@ -3,7 +3,7 @@ import UIKit
 
 public class FlutterMylocationPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
-    let channel = FlutterMethodChannel(name: "flutter_mylocation", binaryMessenger: registrar.messenger())
+    let channel = FlutterMethodChannel(name: "plugins.flutter.io/flutter_mylocation", binaryMessenger: registrar.messenger())
     let instance = FlutterMylocationPlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
   }

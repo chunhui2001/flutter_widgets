@@ -10,7 +10,7 @@ class FlutterMybuttonPlugin: FlutterPlugin, MethodCallHandler {
   private lateinit var channel : MethodChannel
 
   override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
-    channel = MethodChannel(flutterPluginBinding.binaryMessenger, "flutter_mybutton")
+    channel = MethodChannel(flutterPluginBinding.binaryMessenger, "plugins.flutter.io/flutter_mybutton")
     channel.setMethodCallHandler(this)
   }
 

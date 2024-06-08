@@ -7,7 +7,7 @@ import 'flutter_mybutton_platform_interface.dart';
 class MethodChannelFlutterMybutton extends FlutterMybuttonPlatform {
   /// The method channel used to interact with the native platform.
   @visibleForTesting
-  final methodChannel = const MethodChannel('flutter_mybutton');
+  final methodChannel = const MethodChannel('plugins.flutter.io/flutter_mybutton');
 
   @override
   Future<String?> getPlatformVersion() async {

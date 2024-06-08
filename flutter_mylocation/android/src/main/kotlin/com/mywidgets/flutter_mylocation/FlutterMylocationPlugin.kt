@@ -13,7 +13,7 @@ class FlutterMylocationPlugin: FlutterPlugin, MethodCallHandler {
   private lateinit var channel : MethodChannel
 
   override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
-    channel = MethodChannel(flutterPluginBinding.binaryMessenger, "flutter_mylocation")
+    channel = MethodChannel(flutterPluginBinding.binaryMessenger, "plugins.flutter.io/flutter_mylocation")
     channel.setMethodCallHandler(this)
   }
 

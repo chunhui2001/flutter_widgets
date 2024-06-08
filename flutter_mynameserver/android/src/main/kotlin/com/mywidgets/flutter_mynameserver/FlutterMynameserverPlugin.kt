@@ -11,7 +11,7 @@ class FlutterMynameserverPlugin: FlutterPlugin, MethodCallHandler {
   private lateinit var channel : MethodChannel
 
   override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
-    channel = MethodChannel(flutterPluginBinding.binaryMessenger, "flutter_mynameserver")
+    channel = MethodChannel(flutterPluginBinding.binaryMessenger, "plugins.flutter.io/flutter_mynameserver")
     channel.setMethodCallHandler(this)
   }
 

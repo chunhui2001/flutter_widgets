@@ -6,7 +6,7 @@ import 'flutter_mynameserver_platform_interface.dart';
 class MethodChannelFlutterMynameserver extends FlutterMynameserverPlatform {
 
   @visibleForTesting
-  final methodChannel = const MethodChannel('flutter_mynameserver');
+  final methodChannel = const MethodChannel('plugins.flutter.io/flutter_mynameserver');
 
   @override
   Future<String?> getPlatformVersion() async {

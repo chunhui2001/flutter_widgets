@@ -3,7 +3,7 @@ import UIKit
 
 public class FlutterMybuttonPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
-    let channel = FlutterMethodChannel(name: "flutter_mybutton", binaryMessenger: registrar.messenger())
+    let channel = FlutterMethodChannel(name: "plugins.flutter.io/flutter_mybutton", binaryMessenger: registrar.messenger())
     let instance = FlutterMybuttonPlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
   }

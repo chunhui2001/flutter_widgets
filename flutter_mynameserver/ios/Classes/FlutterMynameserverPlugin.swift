@@ -3,7 +3,7 @@ import UIKit
 
 public class FlutterMynameserverPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
-    let channel = FlutterMethodChannel(name: "flutter_mynameserver", binaryMessenger: registrar.messenger())
+    let channel = FlutterMethodChannel(name: "plugins.flutter.io/flutter_mynameserver", binaryMessenger: registrar.messenger())
     let instance = FlutterMynameserverPlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
   }
