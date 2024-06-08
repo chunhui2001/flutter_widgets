@@ -1,0 +1,27 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  errors:
+    camel_case_types: ignore
+    constant_identifier_names: ignore
+    library_prefixes: ignore
+    non_constant_identifier_names: ignore
+    prefer_typing_uninitialized_variables: ignore
+    public_member_api_docs: ignore
+    sort_pub_dependencies: ignore
+    type_annotate_public_apis: ignore
+
+linter:
+  rules:
+    prefer_const_constructors: false
+    prefer_const_constructors_in_immutables: false
+    prefer_const_literals_to_create_immutables: false
+
+    camel_case_types: false
+    constant_identifier_names: false
+    library_prefixes: false
+    non_constant_identifier_names: false
+    prefer_typing_uninitialized_variables: false
+    public_member_api_docs: false
+    sort_pub_dependencies: false
+    type_annotate_public_apis: false
